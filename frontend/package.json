@@ -1,0 +1,60 @@
+{
+  "name": "rb-yandex-speech-wp-plugin",
+  "version": "1.0.0",
+  "description": "Frontend for rb-yandex-speech wp plugin",
+  "author": "Sergey Nikonorov <s.nikonorov@brl.ru>",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "mitt": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-export-default-from": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "autoprefixer": "9.8.8",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.10",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.4.1",
+    "core-js": "^3.23.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^3.6.0",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "file-loader": "^6.2.0",
+    "friendly-errors-webpack-plugin": "^1.7",
+    "html-webpack-partials-plugin": "^0.8.0",
+    "html-webpack-plugin": "^4.5.2",
+    "mini-css-extract-plugin": "^0.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.8",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.3.0",
+    "terser-webpack-plugin": "^3.1.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "dev": "node ./node_modules/webpack-cli/bin/cli.js --mode development",
+    "build": "node ./node_modules/webpack-cli/bin/cli.js --mode production"
+  },
+  "volta": {
+    "node": "16.13.2",
+    "yarn": "1.22.19"
+  }
+}

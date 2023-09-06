@@ -1,0 +1,46 @@
+@import "mixins";
+
+#yandex-speech-kit-settings {
+  legend {
+    font-weight: bold;
+  }
+}
+
+#yandex-speech-kit {
+  select {
+    width: 100%;
+  }
+  &.postbox {
+    background-color: #ebf5fe;
+  }
+}
+#yandex_speech_audio_container,
+#yandex_speech_notice_container {
+  margin: 5px 0;
+}
+
+.yandex-speech-notice {
+  background: #fff;
+  border: {
+    width: 1px;
+    style: solid;
+    color: rgb(195, 196, 199);
+  }
+  border-left: {
+    width: 4px;
+    color: rgb(195, 196, 199);
+  }
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  margin: 0;
+  padding: 10px;
+
+  $colors: (
+    "warning": "#dba617",
+    "error": "#d63638",
+    "success": "#00a32a",
+  );
+
+  @each $name, $color in $colors {
+    @include border-left-variants($name, $color);
+  }
+}

@@ -1,0 +1,5 @@
+@mixin border-left-variants ($class, $hex) {
+  &.notice-#{$class} {
+    border-left-color: #{$hex};
+  }
+}
