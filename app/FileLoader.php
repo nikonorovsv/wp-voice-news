@@ -9,7 +9,7 @@ namespace WPVoiceNews;
  */
 class FileLoader
 {
-    const FILE_NAME_PREFIX = 'yandex_speech_kit_';
+    const FILE_NAME_PREFIX = 'wp_voice_news_';
 
     private string $_fileData;
 

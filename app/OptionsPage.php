@@ -14,27 +14,27 @@ class OptionsPage {
     /**
      * Заголовок страницы настроек
      */
-    const TITLE = 'Настройки Yandex SpeechKit';
+    const TITLE = 'Настройки WP Voice News';
 
     /**
      * Название пункта меню в панели администратора
      */
-    const MENU_TITLE = 'Yandex SpeechKit';
+    const MENU_TITLE = 'WP Voice News';
 
     /**
      * Слаг URL страницы настроек
      */
-    const MENU_SLUG  = 'yandex-speech-kit';
+    const MENU_SLUG  = 'wp-voice-news';
 
     /**
      * Права на редактирование страницы
      */
     const CAPABILITY = 'manage_options';
 
-    const OPTION_NAME_API_KEY     = 'yandex_speech_kit_api_key';
-    const OPTION_NAME_POST_TYPES  = 'yandex_speech_kit_post_types';
-    const OPTION_NAME_FORMAT      = 'yandex_speech_kit_format';
-    const OPTION_NAME_SAMPLE_RATE = 'yandex_speech_kit_sample_rate';
+    const OPTION_NAME_API_KEY     = 'wp_voice_news_api_key';
+    const OPTION_NAME_POST_TYPES  = 'wp_voice_news_post_types';
+    const OPTION_NAME_FORMAT      = 'wp_voice_news_format';
+    const OPTION_NAME_SAMPLE_RATE = 'wp_voice_news_sample_rate';
 
     public function __construct()
     {
@@ -62,7 +62,7 @@ class OptionsPage {
      */
     public function includeTemplate ()
     {
-        include WP_VOICE_NEWS_URL . 'views/admin-options-page.php';
+        include WP_VOICE_NEWS_DIR . 'views/admin-options-page.php';
     }
 
     /**

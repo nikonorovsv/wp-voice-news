@@ -9,17 +9,17 @@ namespace WPVoiceNews;
  */
 class PostMetaBox
 {
-    const FIELD_ID = 'yandex-speech-kit';
+    const FIELD_ID = 'wp_voice_news';
     const TITLE    = 'Озвучка';
 
-    const META_KEY_FIELD_HASH = 'yandex_speech_kit_hash';
-    const META_KEY_FIELD_KEY  = 'yandex_speech_kit_field_key';
-    const META_KEY_TEXT_TYPE  = 'yandex_speech_kit_text_type';
-    const META_KEY_LANG       = 'yandex_speech_kit_lang';
-    const META_KEY_VOICE      = 'yandex_speech_kit_voice';
-    const META_KEY_EMOTION    = 'yandex_speech_kit_emotion';
-    const META_KEY_SPEED      = 'yandex_speech_kit_speed';
-    const META_KEY_AUDIO_ID   = 'yandex_speech_kit_audio_id';
+    const META_KEY_FIELD_HASH = 'wp_voice_news_hash';
+    const META_KEY_FIELD_KEY  = 'wp_voice_news_field_key';
+    const META_KEY_TEXT_TYPE  = 'wp_voice_news_text_type';
+    const META_KEY_LANG       = 'wp_voice_news_lang';
+    const META_KEY_VOICE      = 'wp_voice_news_voice';
+    const META_KEY_EMOTION    = 'wp_voice_news_emotion';
+    const META_KEY_SPEED      = 'wp_voice_news_speed';
+    const META_KEY_AUDIO_ID   = 'wp_voice_news_audio_id';
 
     const DEFAULT_FIELD_KEY   = 'post_excerpt';
 
@@ -105,7 +105,7 @@ class PostMetaBox
      */
     public function includeTemplate()
     {
-        include WP_VOICE_NEWS_URL . 'views/admin-post-metabox.php';
+        include WP_VOICE_NEWS_DIR . 'views/admin-post-metabox.php';
     }
 
     /**

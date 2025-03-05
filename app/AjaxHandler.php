@@ -199,7 +199,7 @@ abstract class AjaxHandler
      * @param int|null $default
      * @return int|null
      */
-    protected function getIntQueryVar(string $param_name, int $default = null): ?int
+    protected function getIntQueryVar(string $param_name, ?int $default = null): ?int
     {
         if (isset($this->_query_vars[$param_name])) {
             return absint($this->_query_vars[$param_name]);
@@ -212,7 +212,7 @@ abstract class AjaxHandler
      * @param string|null $default
      * @return string|null
      */
-    protected function getStringQueryVar(string $param_name, string $default = null): ?string
+    protected function getStringQueryVar(string $param_name, ?string $default = null): ?string
     {
         if (isset($this->_query_vars[$param_name])) {
             return sanitize_text_field($this->_query_vars[$param_name]);

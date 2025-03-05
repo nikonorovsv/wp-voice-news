@@ -55,12 +55,12 @@ $options = [
     ]
 ]; ?>
 
-<div id="yandex_speech_notice_container">
+<div id="wp_voice_news_notice_container">
     <?php
 
     if (!empty($defaults['field_hash']) && $defaults['field_hash'] !== md5($post->{$defaults['field_key']})) { ?>
 
-        <div class="yandex-speech-notice notice-warning">
+        <div class="wp-voice-news-notice notice-warning">
             <?= __(Message::HASH_NOT_EQUAL, WP_VOICE_NEWS_PREFIX) ?>
         </div>
 
@@ -68,7 +68,7 @@ $options = [
     } ?>
 </div>
 
-<div id="yandex_speech_audio_container">
+<div id="wp_voice_news_audio_container">
 
     <?php
 
@@ -90,13 +90,13 @@ $options = [
 foreach ($options as $key => $data) { ?>
 
     <p>
-        <label for="yandex_speech_<?= $key ?>_field">
+        <label for="wp_voice_news_<?= $key ?>_field">
             <strong><?= $data['label'] ?></strong>
         </label>
         <br>
         <select
             name="<?= $key ?>"
-            id="yandex_speech_<?= $key ?>_field"
+            id="wp_voice_news_<?= $key ?>_field"
             <?= (count($data['items']) > 1) ? '' : 'disabled' ?>
         >
             <?php
@@ -119,16 +119,16 @@ foreach ($options as $key => $data) { ?>
 } ?>
 
 <p>
-    <label for="yandex_speech_use_ssml_field">
-        <input type="checkbox" name="use_ssml" id="yandex_speech_use_ssml_field">
-        <?= __('Текст в <a href="https://cloud.yandex.ru/docs/speechkit/tts/ssml" target="_blank">формате SSML</a>', WP_VOICE_NEWS_PREFIX) ?>
+    <label for="wp_voice_news_use_ssml_field">
+        <input type="checkbox" name="use_ssml" id="wp_voice_news_use_ssml_field">
+        <?= __('Текст в <a href="https://yandex.cloud/ru/docs/speechkit/tts/markup/ssml" target="_blank">формате SSML</a>', WP_VOICE_NEWS_PREFIX) ?>
     </label>
 </p>
 
 <p><small><?= __('Важно! Сохраните изменения перед озвучкой.', WP_VOICE_NEWS_PREFIX) ?></small></p>
 
 <button
-        id="yandex_speech_submit"
+        id="wp_voice_news_submit"
         type="button"
         class="button"
         data-nonce="<?= AjaxHandler::getNonce() ?>"
@@ -138,7 +138,7 @@ foreach ($options as $key => $data) { ?>
 </button>
 
 <button
-    id="yandex_speech_remove"
+    id="wp_voice_news_remove"
     type="button"
     class="button button-link-delete<?= !$audio ? ' hidden' : '' ?>"
     data-post-id="<?= $post->ID ?>"

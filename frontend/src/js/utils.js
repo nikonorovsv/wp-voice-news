@@ -52,7 +52,7 @@ export const notify = ($el, message, type = 'error') => {
   $el.innerText = ''
 
   const notice = document.createElement('div')
-  notice.classList.add('yandex-speech-notice', `notice-${type}`)
+  notice.classList.add('wp-voice-news-notice', `notice-${type}`)
   notice.innerText = message
 
   $el.appendChild(notice)

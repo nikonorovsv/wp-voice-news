@@ -1,12 +1,12 @@
 @import "mixins";
 
-#yandex-speech-kit-settings {
+#wp_voice_news_settings {
   legend {
     font-weight: bold;
   }
 }
 
-#yandex-speech-kit {
+#wp_voice_news {
   select {
     width: 100%;
   }
@@ -14,12 +14,12 @@
     background-color: #ebf5fe;
   }
 }
-#yandex_speech_audio_container,
-#yandex_speech_notice_container {
+#wp_voice_news_audio_container,
+#wp_voice_news_notice_container {
   margin: 5px 0;
 }
 
-.yandex-speech-notice {
+.wp-voice-news-notice {
   background: #fff;
   border: {
     width: 1px;

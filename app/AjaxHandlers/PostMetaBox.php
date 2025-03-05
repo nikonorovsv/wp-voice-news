@@ -13,7 +13,7 @@ use WPVoiceNews\Message;
  */
 class PostMetaBox extends AjaxHandler
 {
-    const ACTION = 'yandex-speech-kit-metabox';
+    const ACTION = 'wp-voice-news-metabox';
     const PUBLIC = false;
 
     /**

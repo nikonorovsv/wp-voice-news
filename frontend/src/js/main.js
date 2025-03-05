@@ -8,22 +8,22 @@ import {
 } from './utils'
 
 window.onload = function () {
-  const $noticeBox = document.getElementById('yandex_speech_notice_container')
-  const $audioBox = document.getElementById('yandex_speech_audio_container')
-  const $submitButton = document.getElementById('yandex_speech_submit')
-  const $removeButton = document.getElementById('yandex_speech_remove')
+  const $noticeBox = document.getElementById('wp_voice_news_notice_container')
+  const $audioBox = document.getElementById('wp_voice_news_audio_container')
+  const $submitButton = document.getElementById('wp_voice_news_submit')
+  const $removeButton = document.getElementById('wp_voice_news_remove')
 
   if ($audioBox === null) {
     return
   }
 
   // Fields
-  const $useSSMLField = document.getElementById('yandex_speech_use_ssml_field')
-  const $langField = document.getElementById('yandex_speech_lang_field')
-  const $voiceField = document.getElementById('yandex_speech_voice_field')
-  const $emotionField = document.getElementById('yandex_speech_emotion_field')
-  const $speedField = document.getElementById('yandex_speech_speed_field')
-  const $fieldKeyField = document.getElementById('yandex_speech_field_key_field')
+  const $useSSMLField = document.getElementById('wp_voice_news_use_ssml_field')
+  const $langField = document.getElementById('wp_voice_news_lang_field')
+  const $voiceField = document.getElementById('wp_voice_news_voice_field')
+  const $emotionField = document.getElementById('wp_voice_news_emotion_field')
+  const $speedField = document.getElementById('wp_voice_news_speed_field')
+  const $fieldKeyField = document.getElementById('wp_voice_news_field_key_field')
 
   /**
    * Делает AJAX-запрос, чтобы получить список доступных голосов для выбранного языка.
@@ -33,7 +33,7 @@ window.onload = function () {
    */
   const updateVoicesList = async () => {
     const ajax = new WPAjax(
-      'yandex-speech-kit-metabox',
+      'wp-voice-news-metabox',
       'get-lang-voices',
       $submitButton.dataset.nonce
     )
@@ -68,7 +68,7 @@ window.onload = function () {
    */
   const updateEmotionsList = async () => {
     const ajax = new WPAjax(
-      'yandex-speech-kit-metabox',
+      'wp-voice-news-metabox',
       'get-voice-emotions',
       $submitButton.dataset.nonce
     )
@@ -104,6 +104,8 @@ window.onload = function () {
       'synthesize',
       $submitButton.dataset.nonce
     )
+
+    console.log(ajax)
 
     try {
       await ajax.load({

@@ -56,7 +56,7 @@ $sampleRateList = SdkHelper::getSampleRateList();
         <?php
     } ?>
 
-    <form id="yandex-speech-kit-settings" name="form" action="<?= $actionUrl ?>" method="POST">
+    <form id="wp_voice_news_settings" name="form" action="<?= $actionUrl ?>" method="POST">
         <table class="form-table" role="presentation">
             <tr>
                 <th scope="row">

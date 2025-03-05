@@ -11,7 +11,7 @@ use WPVoiceNews\Api\Exception\NotFoundException;
  */
 class Base
 {
-    const NAMESPACE = 'rb';
+    const NAMESPACE = 'wvn';
     const VERSION   = 'v1.0';
     const ENDPOINT  = 'voice';
 
