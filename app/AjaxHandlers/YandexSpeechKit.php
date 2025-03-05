@@ -116,6 +116,8 @@ class YandexSpeechKit extends AjaxHandler
             // Получаем бинарную запись файла озвучки
             $fileData = $cloud->request($synthesize);
 
+            $this->addResponseParam('fileData', $fileData);
+
             $fileLoader = new FileLoader();
             $fileLoader->setFileData($fileData);
 
